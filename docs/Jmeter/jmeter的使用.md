@@ -1,7 +1,38 @@
-<!-- TOC -->
-
-<!-- /TOC -->
-
+  <!-- /toc -->
+  * [一、jmeter文件目录介绍](#一jmeter文件目录介绍)
+      * [1.bin目录文件](#1bin目录文件)
+      * [2.docs接口文档目录](#2docs接口文档目录)
+      * [3.extras扩展插件目录](#3extras扩展插件目录)
+      * [4.lib](#4lib)
+      * [5.licenses](#5licenses)
+      * [6.printable_docs](#6printable_docs)
+   * [二、Jmeter功能概要](#二jmeter功能概要)
+      * [1.Jmeter工具组成部分](#1jmeter工具组成部分)
+      * [2.线程用户Threads (Users)](#2线程用户threads-users)
+         * [1) setup thread group](#1-setup-thread-group)
+         * [2）teardown thread group](#2teardown-thread-group)
+         * [3）thread group](#3thread-group)
+      * [3.测试片段（Test Fragment）](#3测试片段test-fragment)
+      * [4.配置元件（Config Element）](#4配置元件config-element)
+      * [5.定时器（Timer）](#5定时器timer)
+      * [6.前置处理器（Per Processors）](#6前置处理器per-processors)
+      * [7.后置处理器（Post Processors）](#7后置处理器post-processors)
+      * [8.断言](#8断言)
+      * [9.监听器](#9监听器)
+      * [10.取样器](#10取样器)
+      * [11.逻辑控制器](#11逻辑控制器)
+   * [三、Jmeter脚本录制](#三jmeter脚本录制)
+      * [1.代理服务器操作步骤](#1代理服务器操作步骤)
+         * [1）创建一个线程组](#1创建一个线程组)
+         * [2）创建一个http代理服务器](#2创建一个http代理服务器)
+            * [①HTTP代理服务器设置--分组详解](#http代理服务器设置--分组详解)
+         * [3）浏览器--internet属性--连接-局域网设置](#3浏览器--internet属性--连接-局域网设置)
+      * [2.Badboy脚本录制](#2badboy脚本录制)
+   * [四、Jmeter元件作用域和执行顺序](#四jmeter元件作用域和执行顺序)
+      * [1.元件作用域](#1元件作用域)
+      * [2.元件执行顺序](#2元件执行顺序)
+<!-- /toc -->
+      
 # 一、jmeter文件目录介绍
 
 ![](F:\JavaPioneer\Jmeter\img\1文件目录介绍.png)
