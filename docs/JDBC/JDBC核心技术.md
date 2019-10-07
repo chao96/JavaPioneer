@@ -611,7 +611,7 @@ JDBCUtils.closeResource(..,...,...);
 
 ①导入jar包
 
-![](docs/JDBC/img/1.png)
+![](/img/1.png)
 
 ②连接代码
 
@@ -658,7 +658,7 @@ maxActive=10
 
 **①导入jar包**
 
-![](docs/JDBC/img/2.png)
+![](/img/2.png)
 
 ②连接代码
 
