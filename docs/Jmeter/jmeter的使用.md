@@ -35,7 +35,7 @@
 
 # 一、jmeter文件目录介绍
 
-![](F:\JavaPioneer\Jmeter\img\1文件目录介绍.png)
+![](docs/Jmeter/img/1文件目录介绍.png)
 
 ## 1.bin目录文件
 
@@ -141,7 +141,7 @@ jmeter证书目录
 
 #### ①HTTP代理服务器设置--分组详解
 
-![](F:\JavaPioneer\Jmeter\img\2代理设置-分组详解.png)
+![](docs/Jmeter/img/2代理设置-分组详解.png)
 
 + 不对样本分组：所有请求全部罗列
 + 在组间添加分隔：加入一个虚拟的以分割线命名的动作
