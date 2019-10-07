@@ -611,7 +611,7 @@ JDBCUtils.closeResource(..,...,...);
 
 ①导入jar包
 
-![img](F:\github_blogs\JavaPioneer\docs\JDBC\img\1.png)
+![](docs/JDBC/img/1.png)
 
 ②连接代码
 
@@ -658,7 +658,7 @@ maxActive=10
 
 **①导入jar包**
 
-![](F:\github_blogs\JavaPioneer\docs\JDBC\img\2.png)
+![](docs/JDBC/img/2.png)
 
 ②连接代码
 
