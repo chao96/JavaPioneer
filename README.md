@@ -13,4 +13,4 @@
 + [Jmeter基本使用](docs/Jmeter/jmeter的使用.md)
 
 # JDBC
-+ [JDBC核心技术](docs/Jmeter/JDBC核心技术.md)
++ [JDBC核心技术](docs/JDBC/JDBC核心技术.md)
