@@ -31,24 +31,23 @@ JDBC是sun公司提供的一套用于数据库操作的接口。java程序员只
 
 ```java
 public void getConnection() throws Exception{
-		
-		//1.读取配置文件中的4个基本信息
-		InputStream is = ConnectionTest.class.getClassLoader().getResourceAsStream("jdbc.properties");
-		Properties pros = new Properties();
-		pros.load(is);
-		
-		String user = pros.getProperty("user");
-		String password = pros.getProperty("password");
-		String url = pros.getProperty("url");
-		String driverClass = pros.getProperty("driver");
-		
-		//2.加载驱动
-		Class.forName(driverClass);
-		
-		//3.获取连接
-		Connection conn = DriverManager.getConnection(url, user, password);
-		System.out.println(conn);
-	}
+	//1.读取配置文件中的4个基本信息
+	InputStream is = ConnectionTest.class.getClassLoader().getResourceAsStream("jdbc.properties");
+	Properties pros = new Properties();
+	pros.load(is);
+
+	String user = pros.getProperty("user");
+	String password = pros.getProperty("password");
+	String url = pros.getProperty("url");
+	String driverClass = pros.getProperty("driver");
+
+	//2.加载驱动
+	Class.forName(driverClass);
+
+	//3.获取连接
+	Connection conn = DriverManager.getConnection(url, user, password);
+	System.out.println(conn);
+}
 ```
 
 **配置文件jdbc.properties**
@@ -64,92 +63,93 @@ driver=com.mysql.jdbc.Driver
 
 ```java
 // 方式一：
-	@Test
-	public void testConnection1() throws SQLException {
-		// 获取Driver实现类对象
-		Driver driver = new com.mysql.jdbc.Driver();
+@Test
+public void testConnection1() throws SQLException {
+	// 获取Driver实现类对象
+	Driver driver = new com.mysql.jdbc.Driver();
 
-		String url = "jdbc:mysql://localhost:3306/test";
-		// 将用户名和密码封装在Properties中
-		Properties info = new Properties();
-		info.setProperty("user", "root");
-		info.setProperty("password", "abc123");
+	String url = "jdbc:mysql://localhost:3306/test";
+	// 将用户名和密码封装在Properties中
+	Properties info = new Properties();
+	info.setProperty("user", "root");
+	info.setProperty("password", "abc123");
 
-		Connection conn = driver.connect(url, info);
-		System.out.println(conn);
-	}
+	Connection conn = driver.connect(url, info);
+	System.out.println(conn);
+}
 
-	// 方式二：对方式一的迭代:在如下的程序中不出现第三方的api,使得程序具有更好的可移植性
-	@Test
-	public void testConnection2() throws Exception {
-		// 1.获取Driver实现类对象：使用反射
-		Class clazz = Class.forName("com.mysql.jdbc.Driver");
-		Driver driver = (Driver) clazz.newInstance();
+// 方式二：对方式一的迭代:在如下的程序中不出现第三方的api,使得程序具有更好的可移植性
+@Test
+public void testConnection2() throws Exception {
+	// 1.获取Driver实现类对象：使用反射
+	Class clazz = Class.forName("com.mysql.jdbc.Driver");
+	Driver driver = (Driver) clazz.newInstance();
 
-		// 2.提供要连接的数据库
-		String url = "jdbc:mysql://localhost:3306/test";
+	// 2.提供要连接的数据库
+	String url = "jdbc:mysql://localhost:3306/test";
 
-		// 3.提供连接需要的用户名和密码
-		Properties info = new Properties();
-		info.setProperty("user", "root");
-		info.setProperty("password", "abc123");
+	// 3.提供连接需要的用户名和密码
+	Properties info = new Properties();
+	info.setProperty("user", "root");
+	info.setProperty("password", "abc123");
 
-		// 4.获取连接
-		Connection conn = driver.connect(url, info);
-		System.out.println(conn);
+	// 4.获取连接
+	Connection conn = driver.connect(url, info);
+	System.out.println(conn);
+}
 
-	}
+// 方式三：使用DriverManager替换Driver
+@Test
+public void testConnection3() throws Exception {
+	// 1.获取Driver实现类的对象
+	Class clazz = Class.forName("com.mysql.jdbc.Driver");
+	Driver driver = (Driver) clazz.newInstance();
 
-	// 方式三：使用DriverManager替换Driver
-	@Test
-	public void testConnection3() throws Exception {
-		// 1.获取Driver实现类的对象
-		Class clazz = Class.forName("com.mysql.jdbc.Driver");
-		Driver driver = (Driver) clazz.newInstance();
+	// 2.提供另外三个连接的基本信息：
+	String url = "jdbc:mysql://localhost:3306/test";
+	String user = "root";
+	String password = "abc123";
 
-		// 2.提供另外三个连接的基本信息：
-		String url = "jdbc:mysql://localhost:3306/test";
-		String user = "root";
-		String password = "abc123";
+	// 注册驱动
+	DriverManager.registerDriver(driver);
 
-		// 注册驱动
-		DriverManager.registerDriver(driver);
+	// 获取连接
+	Connection conn = DriverManager.getConnection(url, user, password);
+	System.out.println(conn);
+}
 
-		// 获取连接
-		Connection conn = DriverManager.getConnection(url, user, password);
-		System.out.println(conn);
-	}
+// 方式四：可以只是加载驱动，不用显示的注册驱动过了。
+@Test
+public void testConnection4() throws Exception {
+	// 1.提供三个连接的基本信息：
+	String url = "jdbc:mysql://localhost:3306/test";
+	String user = "root";
+	String password = "abc123";
 
-	// 方式四：可以只是加载驱动，不用显示的注册驱动过了。
-	@Test
-	public void testConnection4() throws Exception {
-		// 1.提供三个连接的基本信息：
-		String url = "jdbc:mysql://localhost:3306/test";
-		String user = "root";
-		String password = "abc123";
-		
-		// 2.加载Driver
-		Class.forName("com.mysql.jdbc.Driver");
-		//相较于方式三，可以省略如下的操作：
-//		Driver driver = (Driver) clazz.newInstance();
-//		// 注册驱动
-//		DriverManager.registerDriver(driver);
-		//为什么可以省略上述操作呢？
-		/*
-		 * 在mysql的Driver实现类中，声明了如下的操作：
-		 * static {
-				try {
-					java.sql.DriverManager.registerDriver(new Driver());
-				} catch (SQLException E) {
-					throw new RuntimeException("Can't register driver!");
-				}
+	// 2.加载Driver
+	Class.forName("com.mysql.jdbc.Driver");
+	//相较于方式三，可以省略如下的操作：
+	/*
+	Driver driver = (Driver) clazz.newInstance();
+	// 注册驱动
+	DriverManager.registerDriver(driver);
+	*/
+	//为什么可以省略上述操作呢？
+	/*
+	 * 在mysql的Driver实现类中，声明了如下的操作：
+	 * static {
+			try {
+				java.sql.DriverManager.registerDriver(new Driver());
+			} catch (SQLException E) {
+				throw new RuntimeException("Can't register driver!");
 			}
-		 */
+		}
+	 */
 
-		// 3.获取连接
-		Connection conn = DriverManager.getConnection(url, user, password);
-		System.out.println(conn);
-	}
+	// 3.获取连接
+	Connection conn = DriverManager.getConnection(url, user, password);
+	System.out.println(conn);
+}
 ```
 ## 三、Statement
 
@@ -366,50 +366,50 @@ public void update(String sql,Object ...args){//sql中占位符的个数与可�
 
 ```java
 public <T> List<T> getForList(Class<T> clazz,String sql, Object... args){
-		Connection conn = null;
-		PreparedStatement ps = null;
-		ResultSet rs = null;
-		try {
-			conn = JDBCUtils.getConnection();
-			ps = conn.prepareStatement(sql);
-			for (int i = 0; i < args.length; i++) {
-				ps.setObject(i + 1, args[i]);
-			}
-
-			rs = ps.executeQuery();
-			// 获取结果集的元数据 :ResultSetMetaData
-			ResultSetMetaData rsmd = rs.getMetaData();
-			// 通过ResultSetMetaData获取结果集中的列数
-			int columnCount = rsmd.getColumnCount();
-			//创建集合对象
-			List<T> list = new ArrayList<T>();
-			while (rs.next()) {
-				T t = clazz.newInstance();
-				// 处理结果集一行数据中的每一个列:给t对象指定的属性赋值
-				for (int i = 0; i < columnCount; i++) {
-					// 获取列值
-					Object columValue = rs.getObject(i + 1);
-
-					// 获取每个列的列名
-					// String columnName = rsmd.getColumnName(i + 1);
-                  	//说明：如果sql中没给字段取别名，getColumnLabel()获取的就是列名
-					String columnLabel = rsmd.getColumnLabel(i + 1);
-
-					// 给t对象指定的columnName属性，赋值为columValue：通过反射
-					Field field = clazz.getDeclaredField(columnLabel);
-					field.setAccessible(true);
-					field.set(t, columValue);
-				}
-				list.add(t);
-			}
-			return list;
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			JDBCUtils.closeResource(conn, ps, rs);
+	Connection conn = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+	try {
+		conn = JDBCUtils.getConnection();
+		ps = conn.prepareStatement(sql);
+		for (int i = 0; i < args.length; i++) {
+			ps.setObject(i + 1, args[i]);
 		}
-		return null;
+
+		rs = ps.executeQuery();
+		// 获取结果集的元数据 :ResultSetMetaData
+		ResultSetMetaData rsmd = rs.getMetaData();
+		// 通过ResultSetMetaData获取结果集中的列数
+		int columnCount = rsmd.getColumnCount();
+		//创建集合对象
+		List<T> list = new ArrayList<T>();
+		while (rs.next()) {
+			T t = clazz.newInstance();
+			// 处理结果集一行数据中的每一个列:给t对象指定的属性赋值
+			for (int i = 0; i < columnCount; i++) {
+				// 获取列值
+				Object columValue = rs.getObject(i + 1);
+
+				// 获取每个列的列名
+				// String columnName = rsmd.getColumnName(i + 1);
+		//说明：如果sql中没给字段取别名，getColumnLabel()获取的就是列名
+				String columnLabel = rsmd.getColumnLabel(i + 1);
+
+				// 给t对象指定的columnName属性，赋值为columValue：通过反射
+				Field field = clazz.getDeclaredField(columnLabel);
+				field.setAccessible(true);
+				field.set(t, columValue);
+			}
+			list.add(t);
+		}
+		return list;
+	} catch (Exception e) {
+		e.printStackTrace();
+	} finally {
+		JDBCUtils.closeResource(conn, ps, rs);
 	}
+	return null;
+}
 ```
 
 ### 2.实现高效的批量插入
@@ -438,37 +438,37 @@ for(int i = 1;i <= 20000;i++){
 
 ```java
 public void testInsert() {
-		Connection conn = null;
-		PreparedStatement ps = null;
-		try {
-			conn = JDBCUtils.getConnection();
-			
-			//设置不允许自动提交数据
-			conn.setAutoCommit(false);
-			
-			String sql = "insert into goods(name)values(?)";
-			ps = conn.prepareStatement(sql);
-			for(int i = 1;i <= 1000000;i++){
-				ps.setObject(1, "name_" + i);
-				//1."攒"sql
-				ps.addBatch();
-				
-				if(i % 500 == 0){
-					//2.执行batch
-					ps.executeBatch();
-					
-					//3.清空batch
-					ps.clearBatch();
-				}
+	Connection conn = null;
+	PreparedStatement ps = null;
+	try {
+		conn = JDBCUtils.getConnection();
+
+		//设置不允许自动提交数据
+		conn.setAutoCommit(false);
+
+		String sql = "insert into goods(name)values(?)";
+		ps = conn.prepareStatement(sql);
+		for(int i = 1;i <= 1000000;i++){
+			ps.setObject(1, "name_" + i);
+			//1."攒"sql
+			ps.addBatch();
+
+			if(i % 500 == 0){
+				//2.执行batch
+				ps.executeBatch();
+
+				//3.清空batch
+				ps.clearBatch();
 			}
-			//提交数据
-			conn.commit();
-		} catch (Exception e) {								
-			e.printStackTrace();
-		}finally{
-			JDBCUtils.closeResource(conn, ps);
 		}
+		//提交数据
+		conn.commit();
+	} catch (Exception e) {								
+		e.printStackTrace();
+	}finally{
+		JDBCUtils.closeResource(conn, ps);
 	}
+}
 ```
 
 ## 五、数据库的事务
