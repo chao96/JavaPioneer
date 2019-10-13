@@ -258,3 +258,27 @@ fetch 命令只是将远端的数据拉到本地仓库，并不自动合并到�
 
 **3.推送数据到远程仓库**
 
+将本地仓库中的数据推送到远程仓库。 `git push [remote-name] [branch-name]`。如果要把本地的 master 分支推送到 `origin` 服务器上（克隆操作会自动使用默认的 master 和 origin 名字），可以运行下面的命令：
+
+```
+$ git push origin master
+```
+
+**4.远程仓库的删除和重命名**
+
+Git 中可以用 `git remote rename` 命令修改某个远程仓库在本地的简称，比如想把 `origin` 改成 `xc`，可以这么运行：
+
+```
+$ git remote rename origin xc
+$ git remote
+xc
+```
+
+> 注意，对远程仓库的重命名，也会使对应的分支名称发生变化，原来的 `origin/master` 分支现在成了 `xc/master`。
+
+碰到远程仓库服务器迁移等，需要移除对应的远程仓库可以执行
+
+```
+git remote rm xc
+```
+
