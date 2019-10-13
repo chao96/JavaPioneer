@@ -1,12 +1,11 @@
-# JavaPioneer
+## JavaPioneer
 愿每过一天的自己都能强大一分，加油！
 
-# 目录
-
-+ [Jmeter](##Jmeter)
-+ [JDBC核心技术](##JDBC)
-+ [工具](##工具)
-
+## 目录
+* [Jmeter](#jmeter)
+* [JDBC](#jdbc)
+* [工具](#%E5%B7%A5%E5%85%B7)
+  * [Git](#git)
 
 
 ## Jmeter
