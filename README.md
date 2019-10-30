@@ -24,4 +24,4 @@
 
 ## MySQL
 ### MySQL原理
-+ [sql语句的执行流程](/docs/MySQL/MySQL原理/1.SQL语句的执行流程.md)
++ [sql语句的执行流程](/docs/MySQL/MySQL原理/SQL语句的执行流程.md)
