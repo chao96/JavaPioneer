@@ -3,7 +3,6 @@
 
 ## 目录
 * [JAVA](#JAVA)
-	* [java代码细节优化](#java代码细节优化)
 * [Jmeter](#jmeter)
 * [JDBC](#jdbc)
 * [工具](#工具)
