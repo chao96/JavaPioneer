@@ -2,6 +2,8 @@
 愿每过一天的自己都能强大一分，加油！
 
 ## 目录
+* [JAVA](#JAVA)
+	* [java代码细节优化](#java代码细节优化)
 * [Jmeter](#jmeter)
 * [JDBC](#jdbc)
 * [工具](#工具)
@@ -9,6 +11,8 @@
 * [MySQL](#mysql)
 	* [MySQL原理](#mysql原理)
 
+## JAVA
++ [java代码细节优化](docs/JAVA/java代码细节优化.md)
 
 ## Jmeter
 + [Jmeter基本使用](docs/Jmeter/jmeter的使用.md)
