@@ -1,6 +1,7 @@
-<details> 
-	<summary>展开查看</summary> 
-    ```mysql
+<details>
+<summary>123</summary>
+	
+```mysql
 CREATE TABLE if not exists item_kill_success (
   `code` varchar(50) NOT NULL COMMENT '秒杀成功生成的订单编号',
   `item_id` int(11) DEFAULT NULL COMMENT '商品id',
