@@ -1,4 +1,4 @@
-**显示全文目录用 \[toc\]**
+**生成全文目录用 \[toc\]**
 一些博客和软件不支持
 
 [TOC]
@@ -142,7 +142,7 @@ Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔�
 
 Markdown 中的语法符号，前面加反斜线\即可显示符号本身
 
-## 3.3 锚点（页内超链接）
+## 3.3 锚点（部分地方）
 
 将准备跳转的地方用html包括起来，例如：跳转到前言
 
@@ -160,4 +160,21 @@ Markdown 中的语法符号，前面加反斜线\即可显示符号本身
 
 # 后记
 
-markdown还有一些高级用法画流程图等等，可以自行了解。
+## github收缩代码块功能
+```
+<details>
+<summary>收缩代码，点我查看</summary>
+	
+```java
+System.out.println("hello world!");
+```
+</details>
+```
+
+<details>
+<summary>收缩代码，点我查看</summary>
+	
+```java
+System.out.println("hello world!");
+```
+</details>
