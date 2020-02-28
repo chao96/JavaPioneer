@@ -14,7 +14,7 @@
 
 ## 二、Zookeeper 实现分布式锁示意图
 
-![](F:\learn\docs\zookeeper\2分布式锁示意图.png)
+![](img/2分布式锁示意图.png)
 
 ## 二、代码实现
 
@@ -67,4 +67,4 @@ public class CuratorLock {
 
 **运行结果：**
 
-![](F:\learn\docs\zookeeper\1控制台日志输出.png)
+![](img/1控制台日志输出.png)
