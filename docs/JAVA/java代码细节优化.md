@@ -1,3 +1,7 @@
+# 目录
+
+
+
 1.判断两对象是否相等时，使用Objects.equals(a, b)方法，避免空指针异常。
 
 2.遍历Map时，如果需要使用value，使用entrySet遍历。
