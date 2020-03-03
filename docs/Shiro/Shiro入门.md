@@ -1,3 +1,15 @@
+> 每天对自己说一句：早安！
+
+* [Shiro](#shiro)
+  * [一、Shiro简介](#一shiro简介)
+  * [二、Shiro架构](#二shiro架构)
+  * [三、SpringBoot + Shiro实现用户认证](#三springboot--shiro实现用户认证)
+    * [1.引入依赖包](#1引入依赖包)
+    * [2.配置文件](#2配置文件)
+    * [3.Shiro的核心API](#3shiro的核心api)
+      * [1) shiro配置类](#1-shiro配置类)
+      * [2) 自定义realm类](#2-自定义realm类)
+
 
 # Shiro
 
