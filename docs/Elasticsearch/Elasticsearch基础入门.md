@@ -1,3 +1,22 @@
+> 每天对自己说一句：早安！
+
+  * [一、ElasticSearch的简介](#一elasticsearch的简介)
+    * [1.简介](#1简介)
+    * [2.优点](#2优点)
+  * [二、ES的核心概念](#二es的核心概念)
+    * [1.索引 index](#1索引-index)
+    * [2.类型 type](#2类型-type)
+    * [3.文档 document](#3文档-document)
+    * [4.字段 Field](#4字段-field)
+    * [5.接近实时 NRT（Near Realtime）](#5接近实时-nrtnear-realtime)
+    * [6.集群 cluster](#6集群-cluster)
+    * [7.节点 node](#7节点-node)
+    * [8.分片 shards](#8分片-shards)
+    * [9.副本 replicas](#9副本-replicas)
+  * [三、kibana与es的交互](#三kibana与es的交互)
+  * [四、Mysql、ES数据同步（logstash）](#四mysqles数据同步logstash)
+  * [五、ES中文分词器](#五es中文分词器)
+
 
 
 ## 一、ElasticSearch的简介
