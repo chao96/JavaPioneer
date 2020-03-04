@@ -1,4 +1,4 @@
-# 目录
+> 每天对自己说一句：早安！
 
   * [一、JDBC概述](#一jdbc概述)
   * [二、数据库的连接](#二数据库的连接)
@@ -22,26 +22,6 @@
       * [2）C3P0](#2c3p0)
 
 
-* [一、JDBC概述](#%E4%B8%80jdbc%E6%A6%82%E8%BF%B0)
-* [二、数据库的连接](#%E4%BA%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5)
-* [三、Statement](#%E4%B8%89statement)
-  * [1\.简单封装JDBCUtils](#1%E7%AE%80%E5%8D%95%E5%B0%81%E8%A3%85jdbcutils)
-  * [2\.Statement实现CRUD操作（了解）](#2statement%E5%AE%9E%E7%8E%B0crud%E6%93%8D%E4%BD%9C%E4%BA%86%E8%A7%A3)
-  * [3\.Statement使用的弊端](#3statement%E4%BD%BF%E7%94%A8%E7%9A%84%E5%BC%8A%E7%AB%AF)
-* [四、PreparedStatement替换Statement](#%E5%9B%9Bpreparedstatement%E6%9B%BF%E6%8D%A2statement)
-  * [1\.CRUD操作](#1crud%E6%93%8D%E4%BD%9C)
-  * [2\.实现高效的批量插入](#2%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E7%9A%84%E6%89%B9%E9%87%8F%E6%8F%92%E5%85%A5)
-* [五、数据库的事务](#%E4%BA%94%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8B%E5%8A%A1)
-  * [1\.事务处理的原则：](#1%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86%E7%9A%84%E5%8E%9F%E5%88%99)
-  * [2\.代码体现](#2%E4%BB%A3%E7%A0%81%E4%BD%93%E7%8E%B0)
-  * [3\.事务的属性](#3%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%B1%9E%E6%80%A7)
-  * [4\.总结（数据库事务操作思想）](#4%E6%80%BB%E7%BB%93%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E6%93%8D%E4%BD%9C%E6%80%9D%E6%83%B3)
-* [六、数据库连接池](#%E5%85%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0)
-  * [1\.传统连接的问题](#1%E4%BC%A0%E7%BB%9F%E8%BF%9E%E6%8E%A5%E7%9A%84%E9%97%AE%E9%A2%98)
-  * [2\.数据库连接池的好处](#2%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%9A%84%E5%A5%BD%E5%A4%84)
-  * [3\.具体实现](#3%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0)
-    * [1）druid（推荐）](#1druid%E6%8E%A8%E8%8D%90)
-    * [2）C3P0](#2c3p0)
 
 ##  一、JDBC概述
 

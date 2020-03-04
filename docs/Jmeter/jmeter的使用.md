@@ -1,4 +1,4 @@
-# 目录
+> 每天对自己说一句：早安！
 
 * [一、jmeter文件目录介绍](#一jmeter文件目录介绍)
   * [1.bin目录文件](#1bin目录文件)
@@ -51,40 +51,7 @@
 * [八、后续扩展](#八后续扩展)
 
 
-<!-- toc -->
-* * [一、jmeter文件目录介绍](#%E4%B8%80jmeter%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D)
-  * [1\.bin目录文件](#1bin%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6)
-  * [2\.docs接口文档目录](#2docs%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%9B%AE%E5%BD%95)
-  * [3\.extras扩展插件目录](#3extras%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6%E7%9B%AE%E5%BD%95)
-  * [4\.lib](#4lib)
-  * [5\.licenses](#5licenses)
-  * [6\.printable\_docs](#6printable_docs)
-* [二、Jmeter功能概要](#%E4%BA%8Cjmeter%E5%8A%9F%E8%83%BD%E6%A6%82%E8%A6%81)
-  * [1\.Jmeter工具组成部分](#1jmeter%E5%B7%A5%E5%85%B7%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86)
-  * [2\.线程用户Threads (Users)](#2%E7%BA%BF%E7%A8%8B%E7%94%A8%E6%88%B7threads-users)
-    * [1) setup thread group](#1-setup-thread-group)
-    * [2）teardown thread group](#2teardown-thread-group)
-    * [3）thread group](#3thread-group)
-  * [3\.测试片段（Test Fragment）](#3%E6%B5%8B%E8%AF%95%E7%89%87%E6%AE%B5test-fragment)
-  * [4\.配置元件（Config Element）](#4%E9%85%8D%E7%BD%AE%E5%85%83%E4%BB%B6config-element)
-  * [5\.定时器（Timer）](#5%E5%AE%9A%E6%97%B6%E5%99%A8timer)
-  * [6\.前置处理器（Per Processors）](#6%E5%89%8D%E7%BD%AE%E5%A4%84%E7%90%86%E5%99%A8per-processors)
-  * [7\.后置处理器（Post Processors）](#7%E5%90%8E%E7%BD%AE%E5%A4%84%E7%90%86%E5%99%A8post-processors)
-  * [8\.断言](#8%E6%96%AD%E8%A8%80)
-  * [9\.监听器](#9%E7%9B%91%E5%90%AC%E5%99%A8)
-  * [10\.取样器](#10%E5%8F%96%E6%A0%B7%E5%99%A8)
-  * [11\.逻辑控制器](#11%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8)
-* [三、Jmeter脚本录制](#%E4%B8%89jmeter%E8%84%9A%E6%9C%AC%E5%BD%95%E5%88%B6)
-  * [1\.代理服务器操作步骤](#1%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4)
-    * [1）创建一个线程组](#1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BA%BF%E7%A8%8B%E7%BB%84)
-    * [2）创建一个http代理服务器](#2%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhttp%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8)
-      * [①HTTP代理服务器设置\-\-分组详解](#http%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE--%E5%88%86%E7%BB%84%E8%AF%A6%E8%A7%A3)
-    * [3）浏览器\-\-internet属性\-\-连接\-局域网设置](#3%E6%B5%8F%E8%A7%88%E5%99%A8--internet%E5%B1%9E%E6%80%A7--%E8%BF%9E%E6%8E%A5-%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BE%E7%BD%AE)
-  * [2\.Badboy脚本录制](#2badboy%E8%84%9A%E6%9C%AC%E5%BD%95%E5%88%B6)
-* [四、Jmeter元件作用域和执行顺序](#%E5%9B%9Bjmeter%E5%85%83%E4%BB%B6%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F)
-  * [1\.元件作用域](#1%E5%85%83%E4%BB%B6%E4%BD%9C%E7%94%A8%E5%9F%9F)
-  * [2\.元件执行顺序](#2%E5%85%83%E4%BB%B6%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F)
-<!-- /toc -->
+
 
 # 一、jmeter文件目录介绍
 
