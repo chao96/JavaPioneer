@@ -1,0 +1,51 @@
+
+# 一、互联网大厂为什么选择RabbitMQ
++ 提供可靠性消息投递模式、返回模式
++ 与SpringAMQP完美的整合、API丰富
++ 集群模式丰富、表达式配置、HA模式、镜像队列模型
++ 保证数据不丢失的前提做到高可靠，高可控
+
+# 二、什么是AMQP高级协议
+高级消息队列协议
+
+# 三、RabbitMQ整体架构模型是什么样子的？
+![image](6E4AB036F74F42F98F90EF717BC2382B)
+## 1.Virtual host
++ 虚拟地址，用于进行逻辑隔离，最上层的消息路由
++ 一个virtual host可以有若干个Exchange和Queue
++ 同一个Virtual host里面不能有相同名称的Exchange、Queue
+
+## 2. Exchange
+交换机，接收消息，根据路由键转发消息到绑定的队列
+
+## 3. Bing
+Exchange和QUeue之间的虚拟连接，binding中可以包含routing key
+
+## 4.Routing key
+一个路由规则，虚拟机可用它来确定如何路由一个特定消息
+
+## 5.Queue
+消息队列，保存消息并将它们转发给消费者
+
+# 四、RabbitMQ安装与使用
+管控台默认端口号：15672
+用户名 密码 guest
+
+# 五、管控台
+## 1.overview
+
+
+## 2.connections
+
+## 3.channels
+网络通信信道
+
+## 4.exchanges
+交换机
+
+## 5.queues
+队列
+
+## 6.admin
++ 对用户的操作
++ 添加Virtual host
