@@ -1,31 +1,10 @@
-# 目录
-
-  * [JavaPioneer](#javapioneer)
-  * [目录](#目录)
-  * [JAVA](#java)
-  * [Jmeter](#jmeter)
-  * [JDBC](#jdbc)
-  * [工具](#工具)
-    * [Git](#git)
-  * [MySQL](#mysql)
-    * [MySQL原理](#mysql原理)
 
 
-## JavaPioneer
-愿每过一天的自己都能强大一分，加油！
-
-## 目录
-* [JAVA](#JAVA)
-* [Jmeter](#jmeter)
-* [JDBC](#jdbc)
-* [工具](#工具)
-	* [Git](#git)
-* [MySQL](#mysql)
-	* [MySQL原理](#mysql原理)
-
-## JAVA
-+ [java代码细节优化](docs/JAVA/java代码细节优化.md)
-
+## Java
++ [java代码规范](docs/Java/java代码规范.md)
++ [java多线程](docs/Java/多线程)
++ [java多线程](docs/Java/反射)
+  
 ## Jmeter
 + [Jmeter基本使用](docs/Jmeter/jmeter的使用.md)
 
