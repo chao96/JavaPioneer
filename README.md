@@ -1,5 +1,5 @@
 > 每天对自己说一句：早安！
-
+# 目录
   * [项目](#项目)
   * [工具](#工具)
     * [Git](#git)
@@ -36,18 +36,18 @@
 
 ### IDE
 #### Eclipse
-+ [常用快捷键](/docs/工具/Eclipse/常用快捷键.md)
-+ [debug调试](/docs/工具/Eclipse/debug调试.md)
++ [常用快捷键](/docs/工具/IDE/Eclipse/常用快捷键.md)
++ [debug调试](/docs/工具/IDE/Eclipse/debug调试.md)
 #### IDEA
-+ [实用插件](/docs/工具/Eclipse/实用插件.md)
++ [实用插件](/docs/工具/IDE/IDEA/实用插件.md)
 
 ### Markdown
-+ [Markdown语法](/docs/工具/Eclipse/markdown语法.md)
++ [Markdown语法](/docs/工具/Markdown/markdown语法.md)
 
 
 ## 设计模式
 + [单例模式](/docs/设计模式/1.单例模式.md)
-+ [单例模式](/docs/设计模式/23种设计模式.md)
++ [23种设计模式](/docs/设计模式/23种设计模式.md)
 
 
 ## 算法
