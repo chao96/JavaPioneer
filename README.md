@@ -68,7 +68,7 @@
   
 ## MySQL
 + [基本sql语句](/docs/MySQL/mysql基本sql语句.md)
-+ [基本sql语句](/docs/MySQL/mysql库、表操作.md)
++ [mysql库、表操作](/docs/MySQL/mysql库、表操作.md)
 
 ### MySQL原理
 + [SQL查询语句执行流程](/docs/MySQL/MySQL原理/1.一条SQL查询语句是如何执行的.md)
@@ -110,7 +110,7 @@
 + [zookeeper分布式锁](docs/Zookeeper/zookeeper分布式锁/zookeeper分布式锁.md)
 
 ## Python
-+ [python基础语法](docs/Python/python基础语法.md)
++ [python基础语法](docs/python/python基础语法.md)
 
 ## Golang
 + [go语言基础语法](docs/Golang/go语言基础语法.md)
