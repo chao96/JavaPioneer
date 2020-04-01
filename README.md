@@ -80,7 +80,7 @@
 + [mysql其余常见问题汇总](/docs/MySQL/MySQL原理/mysql其余常见问题汇总.md)
 
 ## Mybatis
-+ [mybatis源码分析][/docs/Mybatis/mybatis.md]
++ [mybatis源码分析](/docs/Mybatis/mybatis.md)
 
 ## Redis
 + [redis基础语法](docs/Redis/1.redis基础语法.md)
