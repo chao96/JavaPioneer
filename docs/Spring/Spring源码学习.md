@@ -603,3 +603,8 @@ InfrastructureAdvisorAutoProxyCreator，它继承了AbstractAutoProxyCreator，�
 事务拦截器：TransactionInterceptor实现了MethodInterceptor接⼝，该通⽤拦截会在产⽣代理对象之前和aop增强合并，最终⼀起影响到代理对象
 
 TransactionInterceptor的invoke⽅法中invokeWithinTransaction会触发原有业务逻辑调⽤（增强事务）
+
+# 八、学习总结
+
+## 1.Spring循环依赖时序图
+![](img/Spring循环依赖时序图.png)
